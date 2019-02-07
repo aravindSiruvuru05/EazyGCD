@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C2C3D758682FB7F6274F018 /* Pods_EazyGCD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71C2A6527F7EFC1AEBB4C1B9 /* Pods_EazyGCD.framework */; };
 		C942DA5C220C20920052B46F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C942DA5B220C20920052B46F /* AppDelegate.swift */; };
 		C942DA5E220C20920052B46F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C942DA5D220C20920052B46F /* RootViewController.swift */; };
 		C942DA60220C20930052B46F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C942DA5F220C20930052B46F /* Assets.xcassets */; };
 		C942DA63220C20930052B46F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C942DA61220C20930052B46F /* LaunchScreen.storyboard */; };
+		C942DA6D220C22C20052B46F /* DispatchQueueHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C942DA6C220C22C20052B46F /* DispatchQueueHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70FAB83D9F3BC1CCB88B4A93 /* Pods-EazyGCD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EazyGCD.debug.xcconfig"; path = "Target Support Files/Pods-EazyGCD/Pods-EazyGCD.debug.xcconfig"; sourceTree = "<group>"; };
+		71C2A6527F7EFC1AEBB4C1B9 /* Pods_EazyGCD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EazyGCD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C942DA58220C20920052B46F /* EazyGCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EazyGCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C942DA5B220C20920052B46F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C942DA5D220C20920052B46F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		C942DA5F220C20930052B46F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C942DA62220C20930052B46F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C942DA64220C20930052B46F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C942DA6C220C22C20052B46F /* DispatchQueueHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchQueueHelper.swift; sourceTree = "<group>"; };
+		D072EEA1894D34BD6E05B351 /* Pods-EazyGCD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EazyGCD.release.xcconfig"; path = "Target Support Files/Pods-EazyGCD/Pods-EazyGCD.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C2C3D758682FB7F6274F018 /* Pods_EazyGCD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6797C962AA6538BDA5126B3B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				70FAB83D9F3BC1CCB88B4A93 /* Pods-EazyGCD.debug.xcconfig */,
+				D072EEA1894D34BD6E05B351 /* Pods-EazyGCD.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8D3ACA006B41EE5A10FAB3B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71C2A6527F7EFC1AEBB4C1B9 /* Pods_EazyGCD.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C942DA4F220C20920052B46F = {
 			isa = PBXGroup;
 			children = (
 				C942DA5A220C20920052B46F /* EazyGCD */,
 				C942DA59220C20920052B46F /* Products */,
+				6797C962AA6538BDA5126B3B /* Pods */,
+				8D3ACA006B41EE5A10FAB3B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +81,7 @@
 			children = (
 				C942DA5B220C20920052B46F /* AppDelegate.swift */,
 				C942DA5D220C20920052B46F /* RootViewController.swift */,
+				C942DA6C220C22C20052B46F /* DispatchQueueHelper.swift */,
 				C942DA5F220C20930052B46F /* Assets.xcassets */,
 				C942DA61220C20930052B46F /* LaunchScreen.storyboard */,
 				C942DA64220C20930052B46F /* Info.plist */,
@@ -68,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C942DA67220C20930052B46F /* Build configuration list for PBXNativeTarget "EazyGCD" */;
 			buildPhases = (
+				C41C45DA45A94A30E4C42699 /* [CP] Check Pods Manifest.lock */,
 				C942DA54220C20920052B46F /* Sources */,
 				C942DA55220C20920052B46F /* Frameworks */,
 				C942DA56220C20920052B46F /* Resources */,
+				710860A5313C2C888058D10B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,11 +156,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		710860A5313C2C888058D10B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-EazyGCD/Pods-EazyGCD-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/TinyConstraints/TinyConstraints.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TinyConstraints.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-EazyGCD/Pods-EazyGCD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C41C45DA45A94A30E4C42699 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EazyGCD-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C942DA54220C20920052B46F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C942DA6D220C22C20052B46F /* DispatchQueueHelper.swift in Sources */,
 				C942DA5E220C20920052B46F /* RootViewController.swift in Sources */,
 				C942DA5C220C20920052B46F /* AppDelegate.swift in Sources */,
 			);
@@ -268,6 +346,7 @@
 		};
 		C942DA68220C20930052B46F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70FAB83D9F3BC1CCB88B4A93 /* Pods-EazyGCD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -286,6 +365,7 @@
 		};
 		C942DA69220C20930052B46F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D072EEA1894D34BD6E05B351 /* Pods-EazyGCD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
