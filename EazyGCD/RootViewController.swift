@@ -45,6 +45,34 @@ class RootViewController: UIViewController {
     }
     
     func grabDataFromDatabase() {
+//        DispatchQueue.global().async(qos: .background) {
+//            print("On the background thread now...")
+//            let result = 1
+//            DispatchQueue.main.async {
+//                print("We are on the main thread now")
+//                self.label.text = "Result: \(result)"
+//            }
+//        }
+        
+//        DispatchQueue.global().async(qos: .background) {
+//            print("On the background thread now...")
+//            let result = 1
+//            let seconds: Double = 3.0
+//            let dispatchTime: DispatchTime = DispatchTime.now() + seconds
+//            DispatchQueue.global().asyncAfter(deadline: dispatchTime) {
+//                DispatchQueue.main.async {
+//                    print("We are on the main thread now")
+//                    self.label.text = "Result: \(result)"
+//                }
+//            }
+//        }
+        
+        DispatchQueueHelper.delay(bySeconds: 3.0, dispatchLevel: .background) {
+            let result = 1
+            DispatchQueueHelper.delay(bySeconds: 0.0, completion: {
+                self.label.text = "Result: \(result)"
+            })
+        }
         
     }
     
